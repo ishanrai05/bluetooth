@@ -2,7 +2,8 @@ import bluetooth
 
 server_sock=bluetooth.BluetoothSocket( bluetooth.RFCOMM )
 
-port = bluetooth.get_available_port( bluetooth.RFCOMM )
+#port = bluetooth.get_available_port( bluetooth.RFCOMM )
+port = 1
 server_sock.bind(("",port))
 server_sock.listen(1)
 print ("listening on port %d" % port)
